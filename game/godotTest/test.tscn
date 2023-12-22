@@ -1,25 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://1fcuqn83p5eb"]
+[gd_scene load_steps=4 format=3 uid="uid://1fcuqn83p5eb"]
 
 [ext_resource type="Script" path="res://test.gd" id="1"]
-[ext_resource type="Script" path="res://Label.gd" id="2_c2we0"]
-[ext_resource type="Texture2D" uid="uid://c8c1i7vlbrmpr" path="res://resources/tiny_dungen/Tiles/tile_0122.png" id="3_d7coc"]
-[ext_resource type="Script" path="res://Icon.gd" id="4_2mma7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqtv2"]
+radius = 70.8308
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_1eu08"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
-position = Vector2(-3, 2)
+position = Vector2(401, 238)
 script = ExtResource("1")
 
-[node name="mylabel" type="Label" parent="."]
-offset_left = 705.0
-offset_top = 325.0
-offset_right = 756.0
-offset_bottom = 348.0
-text = "test"
-script = ExtResource("2_c2we0")
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(177, 86)
 
-[node name="myicon" type="Sprite2D" parent="."]
-position = Vector2(325.5, 251.5)
-scale = Vector2(6.6875, 6.8125)
-texture = ExtResource("3_d7coc")
-script = ExtResource("4_2mma7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_aqtv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1038.83, 0)
+scale = Vector2(-1037.83, 510.424)
+texture = SubResource("Texture2DRD_1eu08")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(354, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(0, -25)
+shape = SubResource("CircleShape2D_aqtv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+position = Vector2(1038.83, 0)
+scale = Vector2(-1037.83, 510.424)
+texture = SubResource("Texture2DRD_1eu08")
