@@ -1,24 +1,37 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    compileSdkVersion 29 // 使用最新的 SDK 版本，根据你的需求调整
+    buildToolsVersion "21.1.0" // 使用与 compileSdkVersion 匹配的构建工具版本
 
     defaultConfig {
         applicationId "com.mycompany.myapp"
-        minSdkVersion 14
-        targetSdkVersion 29
+        minSdkVersion 21 // 最低支持 SDK 版本，根据你的需求调整
+        targetSdkVersion 29 // 目标 SDK 版本，与 compileSdkVersion 保持一致
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 添加其他必要的依赖项，例如 AndroidX 库等
 }
+
+// 如果你的项目需要 Kotlin 支持，添加以下内容
+// apply plugin: 'kotlin-android'
+// apply plugin: 'kotlin-kapt'
+
+// Kotlin 依赖项示例（如果需要）
+// dependencies {
+//     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+// }
+
+// 确保在项目根目录的 build.gradle 文件中定义了 Kotlin 版本
+// ext.kotlin_version = '1.6.0' // 使用合适的 Kotlin 版本
