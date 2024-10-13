@@ -1,21 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dppdmynmwif60"]
+[gd_scene load_steps=3 format=3 uid="uid://dppdmynmwif60"]
 
-[ext_resource type="Script" path="res://Main.cs" id="1_0nf73"]
-[ext_resource type="Script" path="res://Paddle.cs" id="2_kivox"]
-[ext_resource type="Script" path="res://Gravity.cs" id="3_wnflc"]
-[ext_resource type="Script" path="res://Ball.cs" id="4_hsyxn"]
+[ext_resource type="Script" path="res://main.gd" id="1_5q062"]
+[ext_resource type="Script" path="res://starnebula.gd" id="2_hiq82"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_0nf73")
+script = ExtResource("1_5q062")
 
-[node name="Paddle1" type="Node2D" parent="."]
-script = ExtResource("2_kivox")
-
-[node name="Paddle2" type="Node2D" parent="."]
-script = ExtResource("2_kivox")
-
-[node name="Gravity" type="Node2D" parent="."]
-script = ExtResource("3_wnflc")
-
-[node name="Ball" type="Node2D" parent="."]
-script = ExtResource("4_hsyxn")
+[node name="StarNebula" type="CPUParticles2D" parent="."]
+script = ExtResource("2_hiq82")
