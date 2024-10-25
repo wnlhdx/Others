@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dppdmynmwif60"]
+[gd_scene load_steps=5 format=3 uid="uid://dppdmynmwif60"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5q062"]
-[ext_resource type="Script" path="res://starnebula.gd" id="2_hiq82"]
+[ext_resource type="Script" path="res://ball.gd" id="2_khkd0"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rilxf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_imwxj"]
+radius = 51.4198
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5q062")
 
-[node name="StarNebula" type="CPUParticles2D" parent="."]
-script = ExtResource("2_hiq82")
+[node name="Ball" type="Area2D" parent="."]
+
+[node name="Img" type="Sprite2D" parent="Ball"]
+texture = SubResource("ViewportTexture_rilxf")
+
+[node name="CheckBox" type="CollisionShape2D" parent="Ball"]
+position = Vector2(115, 98)
+shape = SubResource("CircleShape2D_imwxj")
+script = ExtResource("2_khkd0")
