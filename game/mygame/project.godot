@@ -13,7 +13,6 @@ config_version=5
 config/name="新建游戏项目"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
 
 [dotnet]
 
@@ -21,4 +20,5 @@ project/assembly_name="新建游戏项目"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 renderer/rendering_method="mobile"
