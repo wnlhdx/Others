@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29 // 使用最新的 SDK 版本，根据你的需求调整
-    buildToolsVersion "21.1.0" // 使用与 compileSdkVersion 匹配的构建工具版本
+    compileSdkVersion 34 // 使用最新的 SDK 版本，根据你的需求调整
+    buildToolsVersion "34.0.0" // 使用与 compileSdkVersion 匹配的构建工具版本
+    namespace "com.mycompany.myapp"
 
     defaultConfig {
         applicationId "com.mycompany.myapp"
         minSdkVersion 21 // 最低支持 SDK 版本，根据你的需求调整
-        targetSdkVersion 29 // 目标 SDK 版本，与 compileSdkVersion 保持一致
+        targetSdkVersion 34 // 目标 SDK 版本，与 compileSdkVersion 保持一致
         versionCode 1
         versionName "1.0"
     }

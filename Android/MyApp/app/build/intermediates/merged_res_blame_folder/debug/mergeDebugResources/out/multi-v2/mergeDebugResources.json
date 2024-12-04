@@ -1,0 +1,61 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mycompany.myapp-debug-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/storage/emulated/0/1my/Git/Others/Android/MyApp/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "9",
+                        "endOffsets": "129"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "151",
+                        "endLines": "5",
+                        "endColumns": "9",
+                        "endOffsets": "225"
+                    }
+                },
+                {
+                    "source": "/storage/emulated/0/1my/Git/Others/Android/MyApp/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "56,99",
+                        "endColumns": "42,52",
+                        "endOffsets": "94,147"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,98",
+                        "endColumns": "42,52",
+                        "endOffsets": "93,146"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.mycompany.myapp-debug-4:/values-v21_values-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "/storage/emulated/0/1my/Git/Others/Android/MyApp/app/src/main/res/values-v21/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "9",
+                        "endOffsets": "133"
+                    }
+                }
+            ]
+        }
+    ]
+}
