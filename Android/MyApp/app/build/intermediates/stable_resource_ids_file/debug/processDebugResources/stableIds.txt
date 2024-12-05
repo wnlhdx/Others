@@ -1,5 +1,0 @@
-com.mycompany.myapp:style/AppTheme = 0x7f040000
-com.mycompany.myapp:string/hello_world = 0x7f030001
-com.mycompany.myapp:string/app_name = 0x7f030000
-com.mycompany.myapp:layout/main = 0x7f020000
-com.mycompany.myapp:drawable/ic_launcher = 0x7f010000

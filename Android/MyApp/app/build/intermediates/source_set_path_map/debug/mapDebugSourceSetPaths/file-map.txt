@@ -1,7 +1,0 @@
-com.mycompany.myapp-pngs-0 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/build/generated/res/pngs/debug
-com.mycompany.myapp-resValues-1 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/build/generated/res/resValues/debug
-com.mycompany.myapp-packageDebugResources-2 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.mycompany.myapp-packageDebugResources-3 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.mycompany.myapp-debug-4 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.mycompany.myapp-debug-5 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/src/debug/res
-com.mycompany.myapp-main-6 /storage/emulated/0/1my/Git/Others/Android/MyApp/app/src/main/res
