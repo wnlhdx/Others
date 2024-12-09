@@ -73,7 +73,8 @@ CREATE TABLE plans (
   "type_of_learn" text,
   "type_detail" text,
   "standard_learn" text,
-  "update_time" text
+  "update_time" text,
+  "book_page" text
 );
 
 -- ----------------------------
