@@ -13,6 +13,7 @@ config_version=5
 config/name="新建游戏项目"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://resources/board.png"
 
 [dotnet]
 
