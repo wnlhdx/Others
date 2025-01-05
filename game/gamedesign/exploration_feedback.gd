@@ -5,7 +5,7 @@ extends Area3D
 var player : CharacterBody3D
 
 func _ready():
-	player = get_node("/root/UltimateGame/Player")  # 获取玩家节点
+	player = get_node("/root/MainScene/Player")  # 获取玩家节点
 
 # 当玩家进入区域时触发
 func _on_ExplorationArea_body_entered(body):

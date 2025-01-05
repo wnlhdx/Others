@@ -8,15 +8,13 @@ var previous_mouse_position : Vector2
 
 func _ready():
 	# 创建 MeshInstance3D 节点作为角色的外观
-	var mesh_node = MeshInstance3D.new()
-	var box_mesh = BoxMesh.new()
+	var mesh_node = get_node("MeshInstance3D")
+	var box_mesh = get_node("CollisionShape3D")
 	mesh_node.mesh = box_mesh
 	mesh_node.scale = Vector3(2, 2, 2)  # 设置角色的外观大小
 	
 	# 创建 CollisionShape3D 并为其设置形状
-	var collision_shape = CollisionShape3D.new()
-	var box_shape = BoxShape3D.new()  # 设置为盒形碰撞体
-	collision_shape.shape = box_shape
+	var collision_shape = get_node("CollisionShape3D")
 	
 	# 将 CollisionShape3D 添加到 CharacterBody3D 中
 	add_child(collision_shape)
@@ -29,7 +27,8 @@ func _ready():
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED  # 启用鼠标捕捉
 	
-	previous_mouse_position = Input.get_mouse  # 初始化鼠标位置
+	previous_mouse_position = get_viewport().get_mouse_position()
+  # 初始化鼠标位置
 
 func _process(delta):
 	# 玩家控制
@@ -51,6 +50,7 @@ func _process(delta):
 	move_and_slide()  # 只需调用 move_and_slide()
 
 	# 获取鼠标增量
+	var current_mouse_position = get_viewport().get_mouse_position()
 	var mouse_delta = Input.get_last_mouse_screen_velocity()  # 获取鼠标的增量
 	if mouse_delta != Vector2.ZERO:  # 确保鼠标有移动
 		rotate_y(deg_to_rad(-mouse_delta.x * mouse_sensitivity))  # 处理水平旋转

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5yswy08nmdri"]
+[gd_scene load_steps=6 format=3 uid="uid://b5yswy08nmdri"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0y3sm"]
 [ext_resource type="Script" path="res://exploration_feedback.gd" id="2_i5huj"]
@@ -6,6 +6,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_p2s6k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1t5rq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4jfnc"]
 
 [node name="MainScene" type="Node3D"]
 
@@ -24,3 +26,4 @@ shape = SubResource("BoxShape3D_1t5rq")
 script = ExtResource("2_i5huj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExplorationFeedback"]
+shape = SubResource("BoxShape3D_4jfnc")
