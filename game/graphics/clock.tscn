@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://nb4118be1g1o"]
+
+[node name="Clock" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Line2D2" type="Line2D" parent="."]
+
+[node name="Line2D3" type="Line2D" parent="."]

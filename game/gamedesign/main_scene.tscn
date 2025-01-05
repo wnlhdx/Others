@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5yswy08nmdri"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_0y3sm"]
+[ext_resource type="Script" path="res://exploration_feedback.gd" id="2_i5huj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p2s6k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1t5rq"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_0y3sm")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("BoxMesh_p2s6k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("BoxShape3D_1t5rq")
+
+[node name="ExplorationFeedback" type="Area3D" parent="."]
+script = ExtResource("2_i5huj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplorationFeedback"]
