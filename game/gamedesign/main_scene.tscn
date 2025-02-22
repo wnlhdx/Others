@@ -1,29 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5yswy08nmdri"]
+[gd_scene load_steps=9 format=3 uid="uid://b5yswy08nmdri"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0y3sm"]
-[ext_resource type="Script" path="res://exploration_feedback.gd" id="2_i5huj"]
+[ext_resource type="Script" path="res://block_manager.gd" id="1_p0tl6"]
+[ext_resource type="PackedScene" uid="uid://bgpva0fww4186" path="res://block.tscn" id="3_utps2"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_p2s6k"]
+[sub_resource type="Environment" id="Environment_fgff5"]
+background_mode = 2
+ambient_light_energy = 0.3
+tonemap_mode = 3
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1t5rq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uwx1"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4jfnc"]
+[sub_resource type="BoxMesh" id="BoxMesh_7r4yu"]
+material = SubResource("StandardMaterial3D_6uwx1")
+size = Vector3(20, 0.5, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xo4b"]
+size = Vector3(20, 0.5, 20)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pmydk"]
 
 [node name="MainScene" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fgff5")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_7r4yu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_7xo4b")
+
 [node name="Player" type="CharacterBody3D" parent="."]
 script = ExtResource("1_0y3sm")
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-mesh = SubResource("BoxMesh_p2s6k")
+block_manager = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("BoxShape3D_1t5rq")
+shape = SubResource("CapsuleShape3D_pmydk")
 
-[node name="ExplorationFeedback" type="Area3D" parent="."]
-script = ExtResource("2_i5huj")
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.5, 0)
+current = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplorationFeedback"]
-shape = SubResource("BoxShape3D_4jfnc")
+[node name="BlockManager" type="Node" parent="."]
+script = ExtResource("1_p0tl6")
+block_scene = ExtResource("3_utps2")
