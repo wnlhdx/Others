@@ -39,7 +39,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("place_block"):
 		var raycast = camera.global_transform * Vector3(0, 0, -1) * max_interact_distance
 		var target_pos = camera.global_position + raycast
-		get_node(block_manager).place_block(target_pos.snapped(Vector3.ONE))
+		# 确保 block_manager 节点存在
+		var manager = get_node(block_manager)
+		if manager:
+			manager.place_block(target_pos.snapped(Vector3.ONE))
+		else:
+			push_error("Player: BlockManager node not found!")
 
 	if Input.is_action_just_pressed("destroy_block"):
 		var ray = PhysicsRayQueryParameters3D.create(camera.global_position, camera.global_position + camera.global_transform.basis.z * -max_interact_distance)

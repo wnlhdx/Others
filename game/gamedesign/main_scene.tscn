@@ -10,6 +10,7 @@ ambient_light_energy = 0.3
 tonemap_mode = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uwx1"]
+albedo_color = Color(0.886682, 0.305679, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7r4yu"]
 material = SubResource("StandardMaterial3D_6uwx1")
