@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bobt31hek4n26"]
 
-[ext_resource type="Script" uid="uid://25dbvyk0s77j" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://25dbvyk0s77j" path="res://actors/player.gd" id="1_xhfnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
 
@@ -11,3 +11,7 @@ script = ExtResource("1_xhfnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xhfnw")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]

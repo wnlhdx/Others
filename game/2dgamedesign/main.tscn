@@ -1,15 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy78r2oc0q0ig"]
+[gd_scene load_steps=2 format=3 uid="uid://cy78r2oc0q0ig"]
 
-[ext_resource type="Script" uid="uid://4b7hmvqbni01" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="Script" uid="uid://d24yqpxy8kku4" path="res://input/input_handler.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bobt31hek4n26" path="res://Player.tscn" id="3_lquwl"]
 
 [node name="Main_tscn" type="Node2D"]
 
-[node name="Main" type="Node2D" parent="."]
-script = ExtResource("1_h2yge")
-
-[node name="InputHandler" type="Node" parent="."]
-script = ExtResource("2_1bvp3")
-
 [node name="Player" parent="." instance=ExtResource("3_lquwl")]
+
+[node name="TileMap_Day" type="TileMap" parent="."]
+format = 2
+
+[node name="TileMap_Night" type="TileMap" parent="."]
+format = 2
+
+[node name="DayBGM" type="AudioStreamPlayer2D" parent="."]
+
+[node name="NightBGM" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
